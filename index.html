@@ -1,0 +1,300 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TPFX Garage</title>
+  <meta name="description" content="TPFX Garage – Projektauto, Merch und Garage Culture.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="images/TPFX_GARAGE_Black1.png">
+
+  <script>document.documentElement.classList.add('js', 'lock');</script>
+  <noscript><style>.loader{display:none!important}</style></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__word">TPFX</span>
+      <span class="loader__count" id="loaderCount">00</span>
+    </div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollBar"></i></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top">TPFX<em>/</em>Garage</a>
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a href="#about">Über uns</a>
+      <a href="#projekt">Projekt</a>
+      <a href="#merch">Merch</a>
+      <a href="#galerie">Galerie</a>
+    </nav>
+    <button class="nav__burger" id="burger" type="button" aria-label="Menü" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <a href="#about">Über uns</a>
+    <a href="#projekt">Projekt</a>
+    <a href="#merch">Merch</a>
+    <a href="#galerie">Galerie</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="hero__top" data-in style="--d:.0">
+        <span class="tag"><i></i>Since 2025</span>
+        <span class="tag tag--ghost">Garage Culture</span>
+      </div>
+
+      <h1 class="hero__title" aria-label="TPFX Garage">
+        <span class="line"><span class="word" data-split>TPFX</span></span>
+        <span class="line line--outline"><span class="word" data-split>Garage</span></span>
+      </h1>
+
+      <div class="hero__badge" data-in style="--d:.35">
+        <div class="hero__ring" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+            <text><textPath href="#circ" textLength="496" lengthAdjust="spacing">WE LIVE OUR DREAM • WE LIVE OUR DREAM • </textPath></text>
+          </svg>
+        </div>
+        <div class="hero__logo"><img src="images/TPFX_GARAGE_Black1.png" alt="TPFX Garage Logo"></div>
+      </div>
+
+      <div class="hero__bottom" data-in style="--d:.5">
+        <p class="hero__sub">· We live our dream ·</p>
+        <a class="hero__scroll" href="#about"><span>Scroll</span><i></i></a>
+      </div>
+    </section>
+
+    <!-- TEXT BANDS -->
+    <section class="bands" aria-hidden="true">
+      <div class="band band--a">
+        <div class="mq" data-mq data-speed="1.1" data-dir="-1">
+          <div class="mq__track"><div class="mq__group">
+            <span>Garage Culture</span><i></i><span class="o">Projekt E46</span><i></i><span>Merch</span><i></i><span class="o">We live our dream</span><i></i>
+          </div></div>
+        </div>
+      </div>
+      <div class="band band--b">
+        <div class="mq" data-mq data-speed="0.9" data-dir="1">
+          <div class="mq__track"><div class="mq__group">
+            <span class="o">TPFX Garage</span><i></i><span>Since 2025</span><i></i><span class="o">E46</span><i></i><span>Street &amp; Tuning</span><i></i>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="wrap about__grid">
+        <div class="about__media reveal">
+          <div class="about__img clip">
+            <img src="images/AI-Profil.jpg" class="lb" data-group="about" alt="Founder Luca S." data-parallax>
+          </div>
+          <span class="about__sticker">Founder</span>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal"><span>01</span> Über uns</p>
+          <h2 class="title reveal">Aus etwas Gutem<br>etwas <em>Eigenes</em> machen.</h2>
+          <p class="lead" data-words>Hey, ich bin Luca – Gründer von TPFX Garage. Schon seit Jahren faszinieren mich Autos, Tuning und die Idee, Dinge nicht einfach zu besitzen, sondern zu verbessern. TPFX Garage ist mein Ort für Projekte, Visionen und die Leidenschaft, aus etwas Gutem etwas Eigenes zu machen.</p>
+
+          <div class="stats reveal" data-stagger id="stats">
+            <div><b data-count="2025">2025</b><span>Gegründet</span></div>
+            <div><b data-count="3" data-pad="2">03</b><span>Projektautos</span></div>
+            <div><b data-count="2" data-pad="2">02</b><span>Merch Pieces</span></div>
+            <div><b>∞</b><span>Leidenschaft</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJEKTE -->
+    <section class="section proj" id="projekt">
+      <div class="proj__block" data-hs>
+        <div class="wrap hs__head">
+          <div>
+            <p class="eyebrow"><span>02</span> Projekt</p>
+            <h2 class="title title--hs">Unser Projekt <em>Auto</em></h2>
+          </div>
+          <div class="hs__ctrl">
+            <button type="button" class="hs__btn" data-hs-prev aria-label="Zurück">←</button>
+            <button type="button" class="hs__btn" data-hs-next aria-label="Weiter">→</button>
+          </div>
+        </div>
+
+        <div class="hs__viewport" tabindex="0" aria-label="E46 Bilder – mit Pfeiltasten, Shift + Scrollen oder Ziehen bewegen">
+          <div class="hs__track">
+          <article class="hcard">
+            <img class="lb" data-group="projekt" src="images/e46_Original.png" alt="E46 Forest" decoding="async" draggable="false">
+            <div class="hcard__ov"><div><p class="kicker">E46 / Forest</p><h3>Forest</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">01</span></div>
+          </article>
+          <article class="hcard">
+            <img class="lb" data-group="projekt" src="images/e46_Sunny.png" alt="E46 Sun" decoding="async" draggable="false">
+            <div class="hcard__ov"><div><p class="kicker">E46 / Sun</p><h3>Sunny</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">02</span></div>
+          </article>
+          <article class="hcard">
+            <img class="lb" data-group="projekt" src="images/e46_Profil.png" alt="E46 Perspective" decoding="async" draggable="false">
+            <div class="hcard__ov"><div><p class="kicker">E46 / Perspective</p><h3>Perspektive</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">03</span></div>
+          </article>
+          <article class="hcard">
+            <img class="lb" data-group="projekt" src="images/e46_04.png" alt="E46 Detail 04" decoding="async" draggable="false">
+            <div class="hcard__ov"><div><p class="kicker">E46 / Detail</p><h3>Cinematic Image</h3><p>Cooles dynamisches Bild des E46</p></div><span class="hcard__no">04</span></div>
+          </article>
+          <article class="hcard">
+            <img class="lb" data-group="projekt" src="images/e46_05.png" alt="E46 Detail 05" decoding="async" draggable="false">
+            <div class="hcard__ov"><div><p class="kicker">E46 / Detail</p><h3>Detail II</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">05</span></div>
+          </article>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="hs__rail" data-hs-rail>
+            <span class="hs__num"><b data-hs-now>01</b> / <span data-hs-total>05</span></span>
+            <div class="hs__bar" role="scrollbar" aria-label="Scroll-Position" aria-orientation="horizontal">
+              <div class="hs__thumb" data-hs-thumb><i></i></div>
+            </div>
+            <span class="hs__hint">Ziehen · Shift + Scroll · ← →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <article class="car reveal">
+          <div class="car__media cmp" data-cmp role="slider" tabindex="0" aria-label="BMW X3 Vorher / Nachher" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img class="cmp__img" src="images/x3_neu.png" alt="BMW X3 – neue Version" draggable="false">
+            <div class="cmp__old"><img src="images/x3_alt.png" alt="BMW X3 – alte Version" draggable="false"></div>
+            <span class="cmp__tag cmp__tag--l">Vorher</span>
+            <span class="cmp__tag cmp__tag--r">Nachher</span>
+            <div class="cmp__bar"><span class="cmp__knob"><b>‹</b><b>›</b></span></div>
+          </div>
+          <div class="car__info">
+            <p class="eyebrow"><span>+</span> Side Project</p>
+            <h3 class="car__title">BMW <em>X3</em></h3>
+            <p>Hier kommt dein Text rein. Schieb den Regler und sieh den Umbau von vorher zu nachher.</p>
+            <div class="chips"><span>Side Project</span><span>Vorher / Nachher</span></div>
+          </div>
+        </article>
+
+        <article class="car car--rev reveal">
+          <div class="car__media car__media--img">
+            <img class="lb" data-group="polo" src="images/polo.png" alt="VW Polo" decoding="async">
+          </div>
+          <div class="car__info">
+            <p class="eyebrow"><span>+</span> Projekt</p>
+            <h3 class="car__title">VW <em>Polo</em></h3>
+            <p>Hier kommt dein Text rein.</p>
+            <div class="chips"><span>Polo</span><span>Projekt</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MERCH -->
+    <section class="section merch" id="merch">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow reveal"><span>03</span> Merch</p>
+          <h2 class="title title--xl reveal"><span class="o">Merch</span></h2>
+        </div>
+
+        <div class="products" data-stagger>
+          <article class="product reveal">
+            <div class="product__tilt">
+              <div class="product__media product__media--jacket">
+                <img class="p-img lb" data-group="merch" src="images/JACKE.png" alt="Zipper Jacke – Vorder- und Rückseite">
+                <span class="product__no" aria-hidden="true">01</span>
+              </div>
+            </div>
+            <div class="product__info">
+              <p class="kicker">Merch 01</p>
+              <h3>Zipper Jacke</h3>
+              <p>Angenehme Zipper Jacke für die Herbsttage. Sie ist in den Farben des e46, um den Vibe perfekt zu catchen.</p>
+              <div class="chips"><span>Herbst</span><span>E46 Colorway</span></div>
+            </div>
+          </article>
+
+          <article class="product reveal">
+            <div class="product__tilt">
+              <div class="product__media product__media--jacket">
+                <img class="p-img lb" data-group="merch" src="images/JACKE_college.png" alt="College Jacke – Vorder- und Rückseite">
+                <span class="product__no" aria-hidden="true">02</span>
+              </div>
+            </div>
+            <div class="product__info">
+              <p class="kicker">Merch 02</p>
+              <h3>College Jacke</h3>
+              <p>Angenehme College Jacke für die Herbsttage. Sie ist in den Farben des e46, um den Vibe perfekt zu catchen.</p>
+              <div class="chips"><span>Herbst</span><span>E46 Colorway</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE / BILDERKETTE -->
+    <section class="section strip" id="galerie">
+      <div class="wrap sec-head">
+        <p class="eyebrow reveal"><span>04</span> Galerie</p>
+        <h2 class="title title--xl reveal">Garage <span class="o">Culture</span></h2>
+      </div>
+
+      <div class="mq mq--gallery" data-mq data-speed="1.1" data-dir="-1" data-always>
+        <div class="mq__track"><div class="mq__group">
+          <figure class="shot"><img class="lb" data-group="kette" src="images/e46_Front.png" alt="E46 Front"></figure>
+          <figure class="shot"><img class="lb" data-group="kette" src="images/e46_Side.png" alt="E46 Side"></figure>
+          <figure class="shot"><img class="lb" data-group="kette" src="images/kette_3.png" alt="Galerie 3"></figure>
+          <figure class="shot"><img class="lb" data-group="kette" src="images/kette_4.png" alt="Galerie 4"></figure>
+          <figure class="shot"><img class="lb" data-group="kette" src="images/kette_5.png" alt="Galerie 5"></figure>
+        </div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true">TPFX</div>
+    <div class="wrap footer__row">
+      <div class="footer__logo"><img src="images/TPFX_Garage_Black.png" alt="TPFX Garage"></div>
+      <p>© 2026 TPFX Garage · We live our dream</p>
+      <a href="#top" class="to-top">Nach oben ↑</a>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" data-lb-close></div>
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="Schließen" data-lb-close>×</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Vorheriges Bild">←</button>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Nächstes Bild">→</button>
+    <div class="lightbox__stage" id="lbStage" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+      <img class="lightbox__img" id="lbImg" src="" alt="">
+      <div class="lightbox__meta"><span id="lbCap"></span><span id="lbCnt"></span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
