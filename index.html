@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="de">
 <head>
@@ -16,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -149,15 +151,15 @@
           <div class="hs__track">
           <article class="hcard">
             <img class="lb" data-group="projekt" src="images/e46_Original.png" alt="E46 Forest" decoding="async" draggable="false">
-            <div class="hcard__ov"><div><p class="kicker">E46 / Forest</p><h3>Forest</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">01</span></div>
+            <div class="hcard__ov"><div><p class="kicker">E46 / Forest</p><h3>Forest</h3></div><span class="hcard__no">01</span></div>
           </article>
           <article class="hcard">
             <img class="lb" data-group="projekt" src="images/e46_Sunny.png" alt="E46 Sun" decoding="async" draggable="false">
-            <div class="hcard__ov"><div><p class="kicker">E46 / Sun</p><h3>Sunny</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">02</span></div>
+            <div class="hcard__ov"><div><p class="kicker">E46 / Sun</p><h3>Sunny</h3></div><span class="hcard__no">02</span></div>
           </article>
           <article class="hcard">
             <img class="lb" data-group="projekt" src="images/e46_Profil.png" alt="E46 Perspective" decoding="async" draggable="false">
-            <div class="hcard__ov"><div><p class="kicker">E46 / Perspective</p><h3>Perspektive</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">03</span></div>
+            <div class="hcard__ov"><div><p class="kicker">E46 / Perspective</p><h3>Perspektive</h3></div><span class="hcard__no">03</span></div>
           </article>
           <article class="hcard">
             <img class="lb" data-group="projekt" src="images/e46_04.png" alt="E46 Detail 04" decoding="async" draggable="false">
@@ -165,7 +167,7 @@
           </article>
           <article class="hcard">
             <img class="lb" data-group="projekt" src="images/e46_05.png" alt="E46 Detail 05" decoding="async" draggable="false">
-            <div class="hcard__ov"><div><p class="kicker">E46 / Detail</p><h3>Detail II</h3><p>Hier kommt dein Text rein.</p></div><span class="hcard__no">05</span></div>
+            <div class="hcard__ov"><div><p class="kicker">E46 / Detail</p><h3>Detail II</h3></div><span class="hcard__no">05</span></div>
           </article>
           </div>
         </div>
@@ -193,7 +195,7 @@
           <div class="car__info">
             <p class="eyebrow"><span>+</span> Side Project</p>
             <h3 class="car__title">BMW <em>X3</em></h3>
-            <p>Hier kommt dein Text rein. Schieb den Regler und sieh den Umbau von vorher zu nachher.</p>
+            <p>Schieb den Regler und sieh den Umbau von vorher zu nachher.</p>
             <div class="chips"><span>Side Project</span><span>Vorher / Nachher</span></div>
           </div>
         </article>
@@ -205,7 +207,7 @@
           <div class="car__info">
             <p class="eyebrow"><span>+</span> Projekt</p>
             <h3 class="car__title">VW <em>Polo</em></h3>
-            <p>Hier kommt dein Text rein.</p>
+            
             <div class="chips"><span>Polo</span><span>Projekt</span></div>
           </div>
         </article>
@@ -295,6 +297,36 @@
     </div>
   </div>
 
+  <script>
+    // Die Animationen sollen auf Desktop und Mobil gleich laufen.
+    (() => {
+      document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        try {
+          const sheet = link.sheet;
+          if (!sheet) return;
+          for (let i = sheet.cssRules.length - 1; i >= 0; i--) {
+            if (sheet.cssRules[i].conditionText === '(prefers-reduced-motion: reduce)') {
+              sheet.deleteRule(i);
+            }
+          }
+        } catch (_) {}
+      });
+      const nativeMatchMedia = window.matchMedia.bind(window);
+      window.matchMedia = query => {
+        const result = nativeMatchMedia(query);
+        if (query === '(prefers-reduced-motion: reduce)') {
+          return new Proxy(result, {
+            get(target, prop) {
+              if (prop === 'matches') return false;
+              const value = Reflect.get(target, prop, target);
+              return typeof value === 'function' ? value.bind(target) : value;
+            }
+          });
+        }
+        return result;
+      };
+    })();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
