@@ -63,25 +63,13 @@
     });
   });
 
+
   /* =========================================================
-     3. Cursor
+     3. Custom Cursor deaktiviert
      ========================================================= */
   const cursor = $('#cursor');
-  if (finePointer && !reduceMotion) {
-    let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
-    addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; cursor.classList.add('on'); }, { passive: true });
-    document.addEventListener('pointerover', e => {
-      cursor.classList.toggle('big', !!e.target.closest('a, button, .lb, [data-cmp], .hs__bar, .hs__viewport'));
-    });
-    document.addEventListener('mouseleave', () => cursor.classList.remove('on'));
-    (function loop() {
-      cx = lerp(cx, x, 0.2); cy = lerp(cy, y, 0.2);
-      cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
-      requestAnimationFrame(loop);
-    })();
-  } else if (cursor) {
-    cursor.remove();
-  }
+  if (cursor) cursor.remove();
+
 
   /* =========================================================
      4. Mobile-Menü
